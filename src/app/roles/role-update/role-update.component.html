@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-xs-12">
+      <form>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="id">Role ID</label>
+            <input type="text" class="form-control" id="id" disabled #idInput />
+          </div>
+          <div class="col-sm-12 form-group">
+            <label for="roleName">Role Name</label>
+            <input type="text" class="form-control" id="roleName" #roleNameInput />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button class="btn btn-success pull-right" type="button" [disabled]="isLoading" (click)="update()">Save</button>
+            <button class="btn btn-danger pull-right" type="button" [disabled]="isLoading">Back</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

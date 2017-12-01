@@ -1,0 +1,9 @@
+<ul class="list-group" *ngIf="users">
+    <a class="list-group-item clearfix" style="cursor: pointer" *ngFor="let user of users" [ngClass]="!user.LockoutEnabled ? 'list-group-item-success' : 'list-group-item-danger'">
+        <span>{{ user.UserName }} (Email: {{ user.Email }})</span>
+        <span class="pull-right">
+            <button class="btn btn btn-danger" (click)="deleteUser(user.Id)">Delete <span class="glyphicon glyphicon-trash"></span></button>
+            <button class="btn btn btn-primary" [routerLink]="['update', user.Id]" >Edit <span class="glyphicon glyphicon-edit"></span></button>
+        </span>
+    </a>
+  </ul>

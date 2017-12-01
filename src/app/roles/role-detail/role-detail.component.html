@@ -1,0 +1,9 @@
+<ul class="list-group" *ngIf="roles">
+    <a class="list-group-item clearfix" style="cursor: pointer" *ngFor="let role of roles">
+        <span>{{ role.Name }}</span>
+        <span class="pull-right">
+            <button class="btn btn btn-danger" (click)="deleteRole(role.Id)">Delete <span class="glyphicon glyphicon-trash"></span></button>
+            <button class="btn btn btn-primary" [routerLink]="['update', role.Id]" >Edit <span class="glyphicon glyphicon-edit"></span></button>
+        </span>
+    </a>
+  </ul>

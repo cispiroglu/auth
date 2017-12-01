@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-xs-12">
+    <hr>
+    <div class="row">
+      <div class="col-xs-8">
+          <h4>List of users</h4>
+      </div>
+      <div class="col-xs-4">
+        <span class="pull-right">
+            <button class="btn btn-success" routerLink="create">Create <span class="glyphicon glyphicon-plus"></span></button>
+        </span>
+      </div>
+    </div>
+    <hr>
+    <app-user-detail [users]="users"></app-user-detail>
+  </div>
+</div>

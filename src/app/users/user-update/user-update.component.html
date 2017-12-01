@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-xs-12">
+      <form>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="userName">User Name</label>
+            <input type="text" class="form-control" id="userName" disabled #userNameInput />
+          </div>
+          <div class="col-sm-12 form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" #emailInput />
+          </div>
+          <div class="col-sm-12 form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" class="form-control" id="phoneNumber" #phoneNumberInput />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button class="btn btn-success pull-right" type="button" [disabled]="isLoading" (click)="update()">Save</button>
+            <button class="btn btn-danger pull-right" type="button" [disabled]="isLoading">Back</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
